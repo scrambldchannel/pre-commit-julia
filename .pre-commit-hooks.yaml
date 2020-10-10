@@ -1,6 +1,6 @@
--   id: julia_test
-    name: 'julia_test'
-    entry: julia-run-test.sh
+-   id: runtests_julia
+    name: 'runtests_julia'
+    entry: runtests.sh
     files: '\.(jl|JL)$'
     language: 'script'
     description: "Runs julia tests"
