@@ -1,6 +1,7 @@
 -   id: runtests_julia
     name: 'runtests_julia'
-    entry: runtests.sh
+    entry: pre_commit_hooks/runtests.sh
     files: '\.(jl|JL)$'
+    verbose: true
     language: 'script'
     description: "Runs julia tests"
