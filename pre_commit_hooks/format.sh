@@ -6,4 +6,7 @@ if ! command which julia &>/dev/null; then
   exit 1
 fi
 
-julia --color=yes -e  "using Pkg;Pkg.add(\"JuliaFormatter\");using JuliaFormatter;format(\"$1\");"
+while :; do
+    julia --color=yes -e  "using Pkg;Pkg.add(\"JuliaFormatter\");using JuliaFormatter;format(\"$1\");"
+    shift
+done
