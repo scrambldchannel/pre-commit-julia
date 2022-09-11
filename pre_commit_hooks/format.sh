@@ -6,4 +6,6 @@ if ! command which julia &>/dev/null; then
   exit 1
 fi
 
-julia --color=yes -e  "using Pkg;Pkg.add(\"JuliaFormatter\");using JuliaFormatter;format(\".\");"
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+julia --color=yes ${SCRIPT_DIR}/format.jl $*
